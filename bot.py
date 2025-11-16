@@ -41,7 +41,7 @@ class MyClient(discord.Client):
 
             async with message.channel.typing():
                 try:
-                    await message.reply(gemini_response(message.content))
+                    await message.reply(gemini_response(prompt))
                 except Exception as e:
                     print(f"Error generating response: {e}")
                     await message.reply("Sorry, I ran into an error trying to respond.")
